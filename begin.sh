@@ -1,7 +1,7 @@
 #!/bin/sh
 yes | pkg update && pkg upgrade
 yes | pkg install git build-essential cmake
-git clone https://github.com/xmrig/xmrig.git && cd xmrig
+git clone https://github.com/xmrig/xmrig.git && apt upgrade -y && cd xmrig
 mkdir build && cd build
 cmake .. -DWITH_HWLOC-OFF
 make -j10 
